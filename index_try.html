@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="fav-icon.jpg">
+  <title>Snakes and ladders</title>
+  <link rel="stylesheet" href="./style_2.css">
+</head>
+<body>
+
+  <div id="welcome" class="game">
+    <header id="game-title">
+      <h1>Snakes and Ladders Game</h1>
+      <!-- <audio src=""></audio> -->
+      <p><b>Select Number Of Players And Click Start</b></p>
+      <div id="up" class="up">
+        <input id="player-num" type="number" min="2" max="4" value="2">
+        
+        <button onclick="startGame()"><b>Start</b></button>
+      </div>
+
+    </header>
+  </div>
+  <div id="gameboard" class="game" hidden>
+    
+
+    <header>
+      <h1 class="m-0">Snakes and Ladders</h1>
+      <!-- <img src="download.png" alt="pic not found"> -->
+
+      <div class="controls">
+        <button id="roll-dice" class="button" onclick="rollDice()">Roll dice</button>
+        <p id="dice-results" class="inline m-0 m-lr"></p>
+        
+        <div id="win" hidden style="float: right">
+          <h3 id="win-text" class="inline m-0 m-lr">You win!</h3>
+          <button class="button" onclick="restart()">Restart</button>
+        </div>
+      </div> 
+    </header>
+
+    <div id="board">
+
+    </div>
+  </div> 
+
+  <audio id="move-sound" src="move.mp3" preload="auto"></audio>
+  <audio id="ladder-sound" src="ladder.mp3" preload="auto"></audio>
+  <audio id="snake-sound" src="snake.mp3" preload="auto"></audio>
+  <audio id="welcome-music" src="Super Mario Bros. Theme Song.mp3" autoplay loop></audio>
+  <!-- <img src="download.png" alt=""> -->
+  
+</body>
+<script src="./script_2_game_logic.js"></script>
+
+</html>
+
+<!-- <input type="text" id="start" style="font-size: 18px; width: 80px;">
+<input type="number" id="number" style="font-size: 18px; width: px;"> -->
